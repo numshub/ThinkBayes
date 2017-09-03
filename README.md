@@ -8,3 +8,4 @@ Available from Green Tea Press at http://thinkbayes.com.
 
 Published by O'Reilly Media, October 2013.
 
+Updated to Python3 by Pierpaolo Da Fieno.

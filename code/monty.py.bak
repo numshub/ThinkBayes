@@ -21,17 +21,17 @@ class Monty(Pmf):
             self.set(hypo, 1)
         self.normalize()
 
-    def update(self, data):
+    def Update(self, data):
         """Updates each hypothesis based on the data.
 
         data: any representation of the data
         """
-        for hypo in list(self.values()):
+        for hypo in self.values():
             like = self.likelihood(data, hypo)
             self.mult(hypo, like)
         self.normalize()
 
-    def likelihood(self, data, hypo):
+    def Likelihood(self, data, hypo):
         """Compute the likelihood of the data under the hypothesis.
 
         hypo: string name of the door where the prize is
@@ -53,7 +53,7 @@ def main():
     pmf.update(data)
 
     for hypo, prob in sorted(pmf.items()):
-        print(hypo, prob)
+        print hypo, prob
 
 
 if __name__ == '__main__':

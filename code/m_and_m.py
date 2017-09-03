@@ -1,5 +1,6 @@
-"""This file contains code for use with "Think Bayes",
-by Allen B. Downey, available from greenteapress.com
+"""This file contains code for use with "Think Bayes".
+
+ By Allen B. Downey, available from greenteapress.com.
 
 Copyright 2012 Allen B. Downey
 License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
@@ -8,7 +9,7 @@ License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
 from thinkbayes import Suite
 
 
-class M_and_M(Suite):
+class MandM(Suite):
     """Map from hypothesis (A or B) to probability."""
 
     mix94 = dict(brown=30,
@@ -32,8 +33,8 @@ class M_and_M(Suite):
 
     hypotheses = dict(A=hypoA, B=hypoB)
 
-    def Likelihood(self, data, hypo):
-        """Computes the likelihood of the data under the hypothesis.
+    def likelihood(self, data, hypo):
+        """Compute the likelihood of the data under the hypothesis.
 
         hypo: string hypothesis (A or B)
         data: tuple of string bag, string color
@@ -45,12 +46,13 @@ class M_and_M(Suite):
 
 
 def main():
-    suite = M_and_M('AB')
+    """main."""
+    suite = MandM('AB')
 
-    suite.Update(('bag1', 'yellow'))
-    suite.Update(('bag2', 'green'))
+    suite.update(('bag1', 'yellow'))
+    suite.update(('bag2', 'green'))
 
-    suite.Print()
+    suite.print()
 
 
 if __name__ == '__main__':

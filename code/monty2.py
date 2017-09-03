@@ -9,7 +9,7 @@ from thinkbayes import Suite
 
 
 class Monty(Suite):
-    def Likelihood(self, data, hypo):
+    def likelihood(self, data, hypo):
         """Computes the likelihood of the data under the hypothesis.
 
         hypo: string name of the door where the prize is
@@ -25,8 +25,8 @@ class Monty(Suite):
 
 def main():
     suite = Monty('ABC')
-    suite.Update('B')
-    suite.Print()
+    suite.update('B')
+    suite.print()
 
 
 if __name__ == '__main__':
